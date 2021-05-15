@@ -251,10 +251,10 @@
 
 // Battery voltage calibration: connect power source. see <How to calibrate>. write value nr 5 to BAT_CALIB_ADC. make and flash firmware. then you can verify voltage on value 6 (devide it by 100.0 to get calibrated voltage).
 #ifndef BAT_CALIB_REAL_VOLTAGE
-  #define BAT_CALIB_REAL_VOLTAGE        43.0       // input voltage measured by multimeter
+  #define BAT_CALIB_REAL_VOLTAGE        39.1       // input voltage measured by multimeter
 #endif
 #ifndef BAT_CALIB_ADC
-  #define BAT_CALIB_ADC                 1704       // adc-value measured by mainboard (value nr 4 on UART debug output)
+  #define BAT_CALIB_ADC                 1530       // adc-value measured by mainboard (value nr 4 on UART debug output)
 #endif
 
 #ifndef BAT_NUMBER_OF_CELLS
@@ -269,7 +269,7 @@
 #endif
 
 #ifndef BAT_LOW_LVL2_ENABLE
-  #define BAT_LOW_LVL2_ENABLE     1         // to beep or not to beep, 1 or 0
+  #define BAT_LOW_LVL2_ENABLE     0         // to beep or not to beep, 1 or 0
 #endif
 #ifndef BAT_LOW_LVL2
   #define BAT_LOW_LVL2            3.5       // your battery is almost empty. Charge now! [V/cell]
@@ -317,6 +317,7 @@
 //#define DEBUG_SERIAL_USART3         // right sensor board cable, disable if I2C (nunchuk) is used!
 //#define DEBUG_SERIAL_SENSOR         // send to USART3 sensor board, without framing, at the CONTROL_SENSOR_BAUD rate
 //#define DEBUG_SERIAL_SERVOTERM
+//#define DEBUG_BAUD 115200
 //#define DEBUG_SERIAL_ASCII          // "1:345 2:1337 3:0 4:0 5:0 6:0 7:0 8:0\r\n"
 
 // ############################### INPUT ###############################
